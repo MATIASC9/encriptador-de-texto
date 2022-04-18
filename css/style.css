@@ -68,9 +68,10 @@ h6 {
 .header__titulo {
   font-size: 1.2rem;
   font-weight: 500;
-  margin-left: 10px;
   text-transform: uppercase;
   color: #fff;
+  width: 100%;
+  text-align: center;
 }
 
 .container {
@@ -79,6 +80,7 @@ h6 {
   padding: 15px;
   align-items: center;
   gap: 30px;
+  height: 100%;
 }
 .container__inputTextoBotones {
   display: flex;
@@ -165,6 +167,21 @@ h6 {
   padding: 10px;
   background-color: #297add;
   color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 30px;
+  }
+  .container__inputTextoBotones__botonesNota__botones {
+    flex-direction: row;
+  }
+  .container__inputTextoBotones__botonesNota__botones__encriptar {
+    width: 100%;
+  }
+  .container__inputTextoBotones__botonesNota__botones__desencriptar {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
