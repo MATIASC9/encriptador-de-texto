@@ -1,0 +1,25 @@
+@media screen and (min-width: 1440px) {
+  .container {
+    flex-direction: row;
+
+    &__inputTextoBotones {
+      height: 100%;
+      padding: 0 100px;
+
+      &__inputTexto {
+        height: 100%;
+      }
+    }
+    &__resultado {
+      height: 100%;
+      width: 40%;
+      justify-content: center;
+
+      &__img {
+        display: inline-block;
+        width: 80%;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
