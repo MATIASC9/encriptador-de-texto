@@ -84,13 +84,14 @@ h6 {
       width: 100%;
       height: 300px;
       border-style: none;
-      align-content: flex-start;
       border-radius: 5px;
       font-size: 1.5rem;
       margin-bottom: 15px;
       background-color: transparent;
       resize: none;
       overflow: auto;
+      padding: 10px;
+      border: 1px solid rgb(173, 173, 173);
     }
     &__botonesNota {
       display: flex;
@@ -138,7 +139,9 @@ h6 {
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: 100%;
     align-items: center;
+    justify-content: center;
     background-color: #fff;
     text-align: center;
     border-radius: 15px;
@@ -146,6 +149,15 @@ h6 {
     padding: 20px;
     gap: 10px;
 
+    &__output {
+      @extend .container__inputTextoBotones__inputTexto;
+      height: 100%;
+      font-size: 1.2rem;
+      display: none;
+    }
+    &__img {
+      display: none;
+    }
     &__titulo {
       font-size: 1.2rem;
       font-weight: 800;
@@ -158,6 +170,11 @@ h6 {
       font-size: 0.9rem;
       font-weight: 200;
     }
+    &__copiar {
+      @extend .container__inputTextoBotones__botonesNota__botones__desencriptar;
+      width: 100%;
+      display: none;
+    }
   }
 }
 .footer {
@@ -166,4 +183,5 @@ h6 {
   padding: 10px;
   background-color: #297add;
   color: #fff;
+  text-align: center;
 }
