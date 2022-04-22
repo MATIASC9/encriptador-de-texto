@@ -13,18 +13,18 @@
   <script src="https://kit.fontawesome.com/51da3644b6.js" crossorigin="anonymous"></script>
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css" type="text/css">
-  <title>Encriptador de texto</title>
+  <title>Encriptador/Desencriptador de texto</title>
 </head>
 
 <body>
   <header class="header">
     <img class="header__logo" src="img/logo-alura.svg" alt="logotipo alura">
-    <h1 class="header__titulo">Encriptador de texto</h1>
+    <h1 class="header__titulo">Encriptador/Desencriptador de texto</h1>
   </header>
 
   <div class="container">
     <div class="container__inputTextoBotones">
-      <textarea class="container__inputTextoBotones__inputTexto" type="text"
+      <textarea class="container__inputTextoBotones__inputTexto" id="input" type="text"
         placeholder="Ingrese el texto aqui"></textarea>
 
       <div class="container__inputTextoBotones__botonesNota">
@@ -33,8 +33,8 @@
           <span class="container__inputTextoBotones__botonesNota__nota__texto">Solo letras minúsculas y sin acentos</span>
         </div>
         <div class="container__inputTextoBotones__botonesNota__botones">
-          <button class="container__inputTextoBotones__botonesNota__botones__encriptar">Encriptar</button>
-          <button class="container__inputTextoBotones__botonesNota__botones__desencriptar">Desencriptar</button>
+          <button class="container__inputTextoBotones__botonesNota__botones__encriptar" id="encriptar">Encriptar</button>
+          <button class="container__inputTextoBotones__botonesNota__botones__desencriptar" id="desencriptar">Desencriptar</button>
         </div>
       </div>
     </div>
@@ -42,11 +42,10 @@
     <div class="container__resultado">
       <img class="container__resultado__img" src="img/muñeco.svg" 
       alt="ilustracion persona">
-      <textarea class="container__resultado__output">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo quia quis blanditiis quo distinctio nisi sunt porro totam, dolorum molestiae. Sequi recusandae perferendis optio ipsum. Magni facilis hic ea ipsam.
-      Provident vitae, suscipit labore repudiandae deleniti et, voluptate quo unde velit perferendis sit excepturi earum placeat accusantium molestias nihil facilis quidem veritatis laudantium voluptas animi perspiciatis, culpa quos est! Iure!</textarea>
+      <textarea class="container__resultado__output" id="output"></textarea>
       <h4 class="container__resultado__titulo">Ningún mensaje fue encontrado</h4>
       <p class="container__resultado__descripcion">Ingresa el texto que desees encriptar o desencriptar.</p>
-      <button class="container__resultado__copiar">Copiar</button>
+      <button class="container__resultado__copiar" id="btnCopiar">Copiar</button>
     </div>
   </div>
 
