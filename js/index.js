@@ -13,6 +13,15 @@ let texto = [];
 let textoEncriptado = [];
 let textoDesencriptado = [];
 
+// Funcion para mostrar el output
+const mostrarOutput = () => {
+  resultadoTitulo.style.display = 'none';
+  resultadoDescripcion.style.display = 'none';
+  resultadoImg.style.display = 'none';
+  output.style.display = 'flex';
+  btnCopiar.style.display = 'block';
+}
+
 // Funcion para encriptar
 const encriptarTexto = () => {
   textoEncriptado = [];
@@ -41,14 +50,11 @@ const encriptarTexto = () => {
     }
   });
   textoEncriptado = textoEncriptado.join('');
-  resultadoTitulo.style.display = 'none';
-  resultadoDescripcion.style.display = 'none';
-  resultadoImg.style.display = 'none';
-  output.style.display = 'flex';
-  btnCopiar.style.display = 'block';
+  mostrarOutput();
   output.innerHTML = textoEncriptado;
-  console.log(texto);
 }
+
+// Encriptar el texto al presionar el boton encriptar
 encriptar.addEventListener('click', () => {
   encriptarTexto();
 });
@@ -81,13 +87,11 @@ const desencriptarTexto = () => {
     textoDesencriptado.push(letra);
   });
   textoDesencriptado = textoDesencriptado.join('');
-  resultadoTitulo.style.display = 'none';
-  resultadoDescripcion.style.display = 'none';
-  resultadoImg.style.display = 'none';
-  output.style.display = 'flex';
-  btnCopiar.style.display = 'block';
+  mostrarOutput();
   output.innerHTML = textoDesencriptado;
 }
+
+// Desencriptar el texto al precionar el boton desencriptar
 desencriptar.addEventListener('click', () => {
   desencriptarTexto();
 });
@@ -97,9 +101,7 @@ const copiarTexto = () => {
   output.select();
   document.execCommand('copy');
 }
+// Copiar output al presionar el boton copiar
 btnCopiar.addEventListener('click', () => {
   copiarTexto();
 });
-
-// Funcion para comprobar que se ha ingresado solo letras
-// const comprobarTexto = (texto) => {
